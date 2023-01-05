@@ -3,15 +3,36 @@
     max-width: 1440px;
 }
 
-.places li {
+.place {
     margin-block: 25px;
+    border-radius: 5px;
     background-color: #E0E2DB;
+    max-height: 150px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    
 }
 
-.dates span{
-    display: inline-block;
-}
-
-.dates span p {
+.place__info__details p {
     font-weight: 700;
+}
+
+.place__img {
+    width: 50%;
+}
+
+.place__img img {
+    /* object-fit: cover; */
+    width: 100%;
+}
+
+.place__info__details p span {
+    font-weight: 200;
+}
+
+.place__info__details {
+    display: flex;
+    justify-content: space-between;
+    /* max-height: 200px; */
 }

@@ -14,13 +14,20 @@
 
     <section class="places">
         <div>
-            <ul>
+            <ul class="places__list">
                 <% for (let place of user.places) { %>
-                    <li> 
-                        <h2><%= place.place %> </h2>
-                        <div class="dates">
-                            <span><p>Depart</p> <%= place.leaveDate %> </span>
-                            <span><p>Return</p> <%= place.returnDate %> </span>
+                    <li class="place"> 
+                        <div class="place__info">
+                            <h2><%= place.place %> </h2>
+                            <div class="place__info__details">
+                                <p>Depart: <span><%= place.leaveDate %> </span></p>
+                            </div>
+                            <div class="place__info__details">
+                                <p>Return: <span><%= place.returnDate %> </span></p>
+                            </div>
+                        </div>
+                        <div class="place__img">
+                            <img src="../public/images/patrick-baum-8uH-1yJk9hI-unsplash.jpg" alt="">
                         </div>
                     </li>
                 <% } %> 
