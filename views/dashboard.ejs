@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/app.css">
+    <title>Travel Dash</title>
+</head>
+<body>
+    <h1>Hello, <%= user.name %>! </h1>
+    <blockquote>- <%= user.reasonForTravel %> </blockquote>
+
+    <section class="places">
+        <div>
+            <ul>
+                <% for (let place of user.places) { %>
+                    <li> 
+                        <h2><%= place.place %> </h2>
+                        <div class="dates">
+                            <span><p>Depart</p> <%= place.leaveDate %> </span>
+                            <span><p>Return</p> <%= place.returnDate %> </span>
+                        </div>
+                    </li>
+                <% } %> 
+            </ul>
+        </div>
+    </section>
+</body>
+</html>
