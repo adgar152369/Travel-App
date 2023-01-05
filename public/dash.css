@@ -1,0 +1,17 @@
+.places {
+    margin: 50px;
+    max-width: 1440px;
+}
+
+.places li {
+    margin-block: 25px;
+    background-color: #E0E2DB;
+}
+
+.dates span{
+    display: inline-block;
+}
+
+.dates span p {
+    font-weight: 700;
+}

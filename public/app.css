@@ -4,19 +4,6 @@
     box-sizing: border-box;
 }
 
-.places {
-    margin: 50px;
-    max-width: 1440px;
-}
-
-.places li {
-    margin-block: 25px;
-}
-
-.dates span{
-    display: inline-block;
-}
-
-.dates span p {
-    font-weight: 700;
+body {
+    background-color: #889696;
 }
