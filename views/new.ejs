@@ -1,0 +1,16 @@
+<%- include('partials/head') %> 
+<body>
+    <form action="/places" method="post">
+        <div class="country">
+            <label for="country">Country</label>
+            <input type="text" id="country" name="country">
+        </div>
+        <div class="city">
+            <label for="city">City</label>
+            <input type="text" id="city" name="city">
+        </div>
+        <a href="/places">Dashboard</a>
+        <button type="submit">Add</button>
+    </form>
+</body>
+</html>

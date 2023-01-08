@@ -1,38 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/app.css">
-    <link rel="stylesheet" href="/public/dash.css">
-    <title>Travel Dash</title>
-</head>
-<body>
-    <h1>Hello, <%= user.name %>! </h1>
-    <blockquote>- <%= user.reasonForTravel %> </blockquote>
+<%- include('partials/head') %> 
 
-    <section class="places">
-        <div>
-            <ul class="places__list">
-                <% for (let place of user.places) { %>
-                    <li class="place"> 
-                        <div class="place__info">
-                            <h2><%= place.place %> </h2>
-                            <div class="place__info__details">
-                                <p>Depart: <span><%= place.leaveDate %> </span></p>
-                            </div>
-                            <div class="place__info__details">
-                                <p>Return: <span><%= place.returnDate %> </span></p>
-                            </div>
-                        </div>
-                        <div class="place__img">
-                            <img src="../public/images/patrick-baum-8uH-1yJk9hI-unsplash.jpg" alt="">
-                        </div>
-                    </li>
-                <% } %> 
-            </ul>
-        </div>
-    </section>
+<body>
+	<%- include('partials/nav') %> 
+	<div class="header-intro">
+		<h1> <%= user.name %> </h1>
+		<blockquote> <i>"<%= user.reasonForTravel %>"</i> </blockquote>
+	</div>
+
+	<section class="places">
+		<div>
+			<ul class="places__list">
+				<% for (let place of userPlaces) { %>
+					<li class="place" style="background-image: url('<%= place.img %>');">
+						<div class="place__info">
+							<h2> <%= place.city %>, </h2>
+							<h2> <%= place.country %> </h2>
+							<div class="place__info__details">
+								<p>Dep<span id="depart">art</span>: <span> <%= place.leaveDate %> </span></p>
+							</div>
+							<div class="place__info__details">
+								<p>Ret<span id="return">urn</span>: <span>	<%= place.returnDate %> </span></p>
+							</div>
+						</div>
+						<a class="go-to-icon go-to-place" href="/places/<%= place.id %>"><p><i class="arrow right"></i></p></a>
+					</li>
+					<% } %>
+			</ul>
+		</div>
+		<a class="add-icon" href="/places/new">Add</a>
+	</section>
 </body>
+
 </html>

@@ -1,0 +1,16 @@
+.header-nav {
+    background-color: #0B2027;
+    padding: 10px 15px;
+}
+
+.header-nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-nav ul li a{
+    color: #F6F1D1;
+    text-decoration: none;
+    font-size: 12px;
+}
