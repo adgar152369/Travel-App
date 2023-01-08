@@ -12,7 +12,7 @@ app.set('view engine', 'ejs');
 app.use(methodOverride('_method'));
 
 const user = {
-    name: "Adam Garcia",
+    name: "Adam",
     age: 26,
     occupation: "Web Developer",
     reasonForTravel: "n",
@@ -21,12 +21,14 @@ const user = {
             country: "Spain",
             city: "Barcelona",
             img: "public/images/barcelona_spain.jpg",
+            color: "#a23e48",
             id: uuid()
         },
         {
             country: "Egypt",
             city: "Cairo",
             img: "public/images/cairo_egypt.jpeg",
+            color: "#f0c987",
             id: uuid()
         }
     ]
@@ -49,8 +51,8 @@ app.get('/places/:id', (req, res) => {
 });
 
 app.post('/places', (req, res) => {
-    const { country, city, id } = req.body;
-    userPlaces.push({country, city, id: uuid()})
+    const { country, city, img,color } = req.body;
+    userPlaces.push({ country, city, img, color, id: uuid() })
     console.log(userPlaces);
     res.redirect('/places');
 });

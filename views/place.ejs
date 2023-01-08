@@ -1,14 +1,15 @@
-<%- include('partials/head') %> 
+<%- include('partials/head') %>
 
 <body>
-    <h1> <%= place.country %> </h1>
-    <h2> <%= place.id %> </h2>
+  <%- include('partials/nav') %>
+  <h1> <%= place.country %> </h1>
+  <h2> <%= place.id %> </h2>
 
-    <a href="/places">Dashboard</a>
+  <a href="/places">Back</a>
 
-    <form method="POST" action="/places/<%= place.id %>?_method=DELETE">
-        <button>DELETE</button>
-    </form>
+  <form method="POST" action="/places/<%= place.id %>?_method=DELETE">
+    <button>DELETE</button>
+  </form>
 </body>
 
 </html>
