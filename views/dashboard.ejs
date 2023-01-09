@@ -4,14 +4,14 @@
 	<%- include('partials/nav') %> 
 	
 	<section class="places">
-		<div class="header-intro">
-			<h1> Welcome back, <span><%= user.name %></span> </h1>
-			<blockquote> <i>"<%= user.reasonForTravel %>"</i> </blockquote>
-		</div>
+		<!-- <div class="header-intro">
+			<h1> Welcome back, <span><%= //user.name %></span> </h1>
+			<blockquote> <i>"<%= //user.reasonForTravel %>"</i> </blockquote>
+		</div> -->
 		<div>
 			<ul class="places__list">
 				<% for (let place of userPlaces) { %>
-					<li class="place" style="background-image: url('<%= place.img %>'); border: solid 1px <%= place.color %>; border-left: solid 8px <%= place.color %>">
+					<li class="place" style="background-image: url('<%= place.img %>'); border: solid 1px <%= place.color %>; border-left: solid 8px <%= place.color %>;">
 						<div class="place__info">
 							<h2> <%= place.city %>, </h2>
 							<h2> <%= place.country %> </h2>

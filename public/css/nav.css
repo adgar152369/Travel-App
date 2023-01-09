@@ -1,11 +1,15 @@
 .header-nav {
-    background-color: #121113;
+    background-color: #2B2D42;
     height: 50px;
     /* padding: 5px 0px 15px 0px; */
-    border-bottom: dashed 1px #c2c2c2;
+    /* border-bottom: dashed 1px #c2c2c2; */
     display: flex;
     /* justify-content: space-between; */
     align-items: center;
+    position: fixed;
+    bottom: 0;
+    min-width: 100%;
+    z-index: 5;
 }
 
 .header-nav ul {
