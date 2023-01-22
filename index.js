@@ -8,6 +8,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.set('views', path.join(__dirname, 'views'));
 app.use('/public', express.static('public'));
+app.use(express.static('js'));
 app.set('view engine', 'ejs');
 app.use(methodOverride('_method'));
 
@@ -37,7 +38,7 @@ const user = {
 let userPlaces = user.places;
 
 app.get('/places', (req, res) => {
-    res.render('dashboard', { user, userPlaces });
+    res.render('home', { user, userPlaces });
 });
 
 app.get('/places/new', (req, res) => {
@@ -71,3 +72,7 @@ app.delete('/places/:id', (req, res) => {
 app.listen(3000, () => {
     console.log('listening on port 3000!');
 })
+
+
+
+
