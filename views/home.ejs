@@ -1,41 +1,35 @@
 <%- include('partials/head') %>
+
 	<body>
 		<%- include('partials/nav') %>
-		<section id="landing"
-			style="background-image: url('https://images.unsplash.com/photo-1593062096033-9a26b09da705?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZGVza3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60'); background-size: cover; background-position: center;">
-			<div class="container">
-				<h1>Welcome to the Travel Tracker</h1>
-				<p>Journey on, wanderlust warriors.</p>
-				<button>Get Started</button>
-			</div>
-		</section>
-		<main>
-			<section id="featured">
-				<h2>Featured Destinations</h2>
-				<ul>
-					<li class="card">
-						<img src="https://via.placeholder.com/150x100" alt="image of destination">
-						<h3>Paris</h3>
-						<p>The city of love and romance</p>
-						<button>Explore</button>
-					</li>
-					<li class="card">
-						<img src="https://via.placeholder.com/150x100" alt="image of destination">
-						<h3>Sydney</h3>
-						<p>Beautiful beaches and iconic landmarks</p>
-						<button>Explore</button>
-					</li>
-					<li class="card">
-						<img src="https://via.placeholder.com/150x100" alt="image of destination">
-						<h3>New York City</h3>
-						<p>The city that never sleeps</p>
-						<button>Explore</button>
-					</li>
-				</ul>
+			<section id="landing"
+				style="background-image: url('https://images.unsplash.com/photo-1593062096033-9a26b09da705?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZGVza3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60'); background-size: cover; background-position: center;">
+				<div class="container">
+					<h1>Welcome to the Travel Tracker</h1>
+					<p>Journey on, wanderlust warriors.</p>
+					<button>Get Started</button>
+				</div>
 			</section>
-		</main>
+			<main>
+				<section id="featured">
+					<h2>Featured Destinations</h2>
+					<ul>
+						<% for( let featured of featuredPlaces) { %>
+							<li class="card">
+								<img src="https://via.placeholder.com/150x100" alt="image of destination">
+								<h3><%- featured.city %> </h3>
+								<p><%- featured.description %> </p>
+								<button><a href="/places/<%- featured.id %>  ">Explore</a></button>
+							</li>
+						<% } %>
+					</ul>
+				</section>
+			</main>
 
-		<script src="app.js"></script>
+
+			<%- include('partials/footer') %>
+
+		<script src="/js/intersectionObserver.js"></script>
 	</body>
 
 	</html>

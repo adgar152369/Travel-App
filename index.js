@@ -8,7 +8,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.set('views', path.join(__dirname, 'views'));
 app.use('/public', express.static('public'));
-app.use(express.static('js'));
+app.use('/js', express.static('js'));
 app.set('view engine', 'ejs');
 app.use(methodOverride('_method'));
 
@@ -35,10 +35,34 @@ const user = {
     ]
 }
 
-let userPlaces = user.places;
+const featured = {
+    featuredPlaces: [
+        {
+            country: "France",
+            city: "Paris",
+            description: 'the city of stank people',
+            id: 1
+        },
+        {
+            country: "United States",
+            city: "New York City",
+            description: 'the city of homeless people',
+            id: 2
+        },
+        {
+            country: "Iceland",
+            city: "Vik",
+            description: 'the city of no people',
+            id: 3
+        }
+    ]
+}
 
-app.get('/places', (req, res) => {
-    res.render('home', { user, userPlaces });
+let userPlaces = user.places;
+let featuredPlaces = featured.featuredPlaces;
+
+app.get('/', (req, res) => {
+    res.render('home', { user, userPlaces, featuredPlaces });
 });
 
 app.get('/places/new', (req, res) => {
@@ -47,8 +71,9 @@ app.get('/places/new', (req, res) => {
 
 app.get('/places/:id', (req, res) => {
     const { id } = req.params;
-    const place = userPlaces.find(p => p.id == id);
-    res.render('place', { place });
+    const placeId = userPlaces.find(p => p.id === parseInt(id));
+    const featuredPlace = featuredPlaces.find(f => f.id === parseInt(id));
+    res.render('place', { placeId, featuredPlace });
 });
 
 app.post('/places', (req, res) => {

@@ -1,9 +1,17 @@
+@import './footer.css';
+@import './place.css';
+
 body {
     font-family: 'EB Garamond', serif;
     margin: 0;
     padding: 0;
     position: relative;
 }
+
+.container {
+    /* margin-top: 60px; */
+}
+
 
 /* * {
     margin: 0;

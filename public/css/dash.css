@@ -71,7 +71,7 @@ main section:nth-of-type(2) ul li button:hover {
     opacity: 0;
     transform: translateY(50px);
     transition: all 2.0s ease;
-    padding: 60px 20px 0 20px;
+    padding: 30px 20px 0 20px;
 }
 
 #featured.visible {
@@ -80,9 +80,13 @@ main section:nth-of-type(2) ul li button:hover {
 }
 
 #featured h2 {
-    font-size: 36px;
+    font-size: 30px;
     font-weight: 700;
     margin-bottom: 20px;
+    margin-top: 0;
+    border-bottom: solid 2px var(--tertiary-color);
+    /* width: 50%; */
+    margin-inline: auto;
 }
 
 #featured h3 {
@@ -125,19 +129,6 @@ main section:nth-of-type(2) ul li button:hover {
     margin-right: 20px;
 }
 
-
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-}
-
-footer p {
-    margin: 0;
-}
-
 #landing {
     height: 100vh;
     display: flex;
@@ -161,8 +152,12 @@ footer p {
     background-color: rgba(255, 255, 255, .05);
     border-radius: 5px;
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     padding: 20px;
     color: beige;
+    position: absolute;
+    width: 75%;
+    top: 35%;
 }
 
 #landing h1 {
@@ -177,9 +172,9 @@ footer p {
 }
 
 #landing button {
-    background-color: #333;
+    background-color: var(--secondary-color);
     border: none;
-    color: #fff;
+    color: var(--button-color);
     cursor: pointer;
     padding: 10px 20px;
     font-size: 16px;
@@ -197,7 +192,7 @@ footer p {
 
 @media only screen and (max-width: 600px) {
     #landing .container {
-        margin-top: -55px;
+        /* margin-top: -55px; */
     }
 
     header nav ul {
