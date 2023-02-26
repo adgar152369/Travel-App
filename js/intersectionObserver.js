@@ -1,4 +1,4 @@
-const featured = document.querySelector('#featured');
+const featured = document.querySelector('#featured-list');
 const main = document.querySelector('main');
 const landingBtn = document.querySelector('#landing button');
 

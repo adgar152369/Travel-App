@@ -11,9 +11,10 @@
 				</div>
 			</section>
 			<main>
+				<%- include('components/quick-guide') %>
 				<section id="featured">
 					<h2>Featured Destinations</h2>
-					<ul>
+					<ul id="featured-list">
 						<% for( let featured of featuredPlaces) { %>
 							<li class="card">
 								<img src="https://via.placeholder.com/150x100" alt="image of destination">
