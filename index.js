@@ -65,6 +65,10 @@ app.get('/', (req, res) => {
     res.render('home', { user, userPlaces, featuredPlaces });
 });
 
+app.get('/places/index', (req, res) => {
+    res.render('index', { userPlaces });
+})
+
 app.get('/places/new', (req, res) => {
     res.render('new');
 });

@@ -9,6 +9,10 @@ body {
     background-color: #242124;
 }
 
+body.unfocus {
+    overflow: hidden;
+}
+
 .container {
     /* margin-top: 60px; */
 }
