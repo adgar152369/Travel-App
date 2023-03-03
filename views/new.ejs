@@ -2,26 +2,29 @@
 
 <body>
   <%- include('partials/nav') %>
-  <form action="/places" method="post">
-    <div class="country">
-      <label for="country">Country</label>
-      <input type="text" id="country" name="country">
-    </div>
-    <div class="city">
-      <label for="city">City</label>
-      <input type="text" id="city" name="city">
-    </div>
-    <div class="new-img">
-      <label for="img">Select an image (optional):</label>
-      <input type="file" id="img" name="img"  accept="image/png, image/jpeg">
-    </div>
-    <div class="color">
-      <label for="color">Color:</label>
-      <input type="color" id="color" name="color">
-    </div>
-    <a href="/places">Back</a>
-    <button type="submit">Add</button>
-  </form>
+  <div class="page-container">
+
+    <form action="/places/index" method="post">
+      <div class="country">
+        <label for="country">Country</label>
+        <input type="text" id="country" name="country">
+      </div>
+      <div class="city">
+        <label for="city">City</label>
+        <input type="text" id="city" name="city">
+      </div>
+      <div class="new-img">
+        <label for="img">Select an image (optional):</label>
+        <input type="file" id="img" name="img"  accept="image/png, image/jpeg">
+      </div>
+      <div class="color">
+        <label for="color">Color:</label>
+        <input type="color" id="color" name="color">
+      </div>
+      <button type="submit">Add</button>
+    </form>
+
+  </div>
 </body>
 
 </html>

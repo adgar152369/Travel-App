@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Places</title>
-</head>
+<%- include('partials/head') %>
 
 <body>
-    <h1>Places</h1>
-
-    <ul>
-        <% for (let place of userPlaces) { %>
-            <li>
-                <a href="/places/<%= place.id %>" style="color: black"><%= place.country %></a>
-                <span style="color: black"> - <%= place.city %></span>
-            </li>
-        <% } %>
-    </ul>
+    <%- include('partials/nav') %>
+    <div class="page-container">
+        <h2>Places</h2>
+        <ul>
+            <% if (!userPlaces) { %>
+                <h2>You have no destinations yet!</h2>
+            <% } else { %>
+                <ul>
+                    <% for (let place of userPlaces) { %>
+                        <li>
+                            <a href="/places/index/<%= place.id %>"><%= place.country %></a>
+                            <span> - <%= place.city %></span>
+                        </li>
+                    <% } %>
+                </ul>
+            <% } %>
+        </ul>
+    </div>
 
     <a href="/">Home</a>
+    <a href="/places/new">Add a place</a>
 </body>
 
 </html>

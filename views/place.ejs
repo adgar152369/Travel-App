@@ -2,21 +2,20 @@
 
   <body>
     <%- include('partials/nav') %>
-    <div class="featured container">
-
-    </div>
-      <h1 class="featured-place-header1">
+    <div class="page-container">
+      <h2>
         <%= featuredPlace.country %>
-      </h1>
-      <h2 class="featured-place-header2">
+      </h2>
+      <h2>
         <%= featuredPlace.id %>
       </h2>
 
       <a href="/">Back</a>
 
-      <form method="POST" action="/places/<%= featuredPlace.id %>?_method=DELETE">
+      <form method="POST" action="/places<%= featuredPlace.id %>?_method=DELETE">
         <button>DELETE</button>
       </form>
+    </div>
   </body>
 
   </html>

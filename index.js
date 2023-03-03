@@ -23,14 +23,14 @@ const user = {
             city: "Barcelona",
             img: "public/images/barcelona_spain.jpg",
             color: "#a23e48",
-            id: uuid()
+            id: 1
         },
         {
             country: "Egypt",
             city: "Cairo",
             img: "public/images/cairo_egypt.jpeg",
             color: "#f0c987",
-            id: uuid()
+            id: 2
         }
     ]
 }
@@ -75,22 +75,34 @@ app.get('/places/new', (req, res) => {
 
 app.get('/places/:id', (req, res) => {
     const { id } = req.params;
-    const placeId = userPlaces.find(p => p.id === parseInt(id));
+    // const placeId = userPlaces.find(p => p.id === parseInt(id));
     const featuredPlace = featuredPlaces.find(f => f.id === parseInt(id));
-    res.render('place', { placeId, featuredPlace });
+    // console.log(featuredPlace);
+    res.render('place', { featuredPlace });
 });
 
-app.post('/places', (req, res) => {
+app.get('/places/index/:id', (req, res) => {
+    const { id } = req.params;
+    const userPlace = userPlaces.find(p => p.id === parseInt(id));
+    console.log(userPlaces)
+    res.render('my-place', { userPlace })
+});
+
+// app.get('/places/my-places/:id', (req, res) => {
+//     const { id } = req.params;
+//     const placeId = userPlaces.find(p => p.id === parseInt(id));
+//     res.render('my-places', { placeId, userPlaces })
+// }) 
+
+app.post('/places/index', (req, res) => {
     const { country, city, img,color } = req.body;
-    userPlaces.push({ country, city, img, color, id: uuid() })
-    console.log(userPlaces);
-    res.redirect('/places');
+    userPlaces.push({ country, city, img, color, id: Math.floor(Math.random() * 100) })
+    res.redirect('/places/index');
 });
 
 app.delete('/places/:id', (req, res) => {
     const { id } = req.params;
     userPlaces = userPlaces.filter(p => p.id !== id);
-    console.log(userPlaces);
     res.redirect('/places');
 })
 

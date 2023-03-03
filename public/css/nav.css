@@ -15,15 +15,17 @@ header .navbar {
     right: 75px;
     height: 100vh;
     padding-left: 10px;
-    transform: translateX(-250px);
-    opacity: 0;
-    transition: all .2s ease-in;
+    /* transform: translateX(-250px);
+    opacity: 0; */
+    display: none;
+    /* transition: all .2s ease-in; */
     background-color: black;
 }
 
 header .navbar.active {
-    transform: translateX(0);
-    opacity: 1;
+    /* transform: translateX(0);
+    opacity: 1; */
+    display: block;
 }
 
 header .flex-header {
@@ -102,77 +104,11 @@ header .logo {
 .hamburger .line {
     display: block;
     width: 30px;
-    height: 1px;
+    height: 3px;
     margin: 7px auto;
     background-color: #f5f5f5;
-    /* border-radius: 3px; */
     transition: all 0.3s ease-in-out;
 }
-
-/* .hamburger:nth-child(2) {
-    transform: translateY(8px);
-}
-
-.hamburger.active:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-}
-
-.hamburger.active:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger.active:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-} */
-
-
-/* header h1>span {
-    text-decoration: underline;
-    padding-bottom: 5px;
-} */
-
-/* .nav-toggle {
-    position: absolute;
-    background: none;
-    top: -8px;
-    right: -8px;
-    border-style: solid;
-    border-width: 50px 0 0 50px;
-    border-color: #6f6d59 transparent transparent #4b493b;
-    box-shadow: -3px 3px 10px -3px rgb(26, 26, 26);
-} */
-
-/* .nav-toggle:hover {
-    cursor: pointer;
-}
-
-header nav.peelOpen {
-    animation: slidein .55s forwards;
-}
-
-@keyframes peelOpen {
-    from {
-        inset: unset;
-        background: none;
-        top: -8px;
-        right: -8px;
-        border-style: solid;
-        border-width: 50px 0 0 50px;
-        border-color: #6f6d59 transparent transparent #4b493b;
-        box-shadow: -3px 3px 10px -3px rgb(26, 26, 26);
-    }
-
-    to {
-        inset: 0;
-        background: #6f6d59;
-        top: 0;
-        right: 0;
-        border-style: none;
-        border-width: 0;
-        border-color: none;
-        box-shadow: none;
-    }
-} */
 
 @keyframes slidein {
     from {

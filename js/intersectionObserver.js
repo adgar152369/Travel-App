@@ -6,7 +6,7 @@ landingBtn.addEventListener('click', function () {
     main.scrollIntoView({
         behavior: 'smooth'
     });
-    featured.classList.add('visible');
+    // featured.classList.add('visible');
 });
 
 // Create an IntersectionObserver
