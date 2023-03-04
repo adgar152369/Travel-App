@@ -1,4 +1,5 @@
 @import './footer.css';
+@import './index.css';
 @import './place.css';
 @import './forms.css';
 
@@ -7,90 +8,52 @@ html {
 }
 
 body {
-    font-family: 'EB Garamond', serif;
+    font-family: 'Manrope', sans-serif;
     margin: 0;
     padding: 0;
     position: relative;
-    background-color: #242124;
+    /* background-color: #F8F4FF; */
 }
 
 body.unfocus {
     overflow: hidden;
 }
 
+/* .dark-bg {
+    background-color: #242124;
+} */
+
 .page-container {
     padding-top: 120px;
+    padding-inline: 10px;
+    min-height: 100vh;
+    background-color: #F8F4FF;
 }
 
 h1, h2, h3, h4,
-p, span, a, li {
-    color: #f5f5f5;
+p, a, li {
+    color: #242124;
 }
 
-
-/* * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+h2 {
+    font-size: 2.5rem;
+    color: #D6CADD;
+    /* font-family: 'EB Garamond', serif; */
 }
 
-body {
-    background-color: #202023;
-    font-family: 'DM Sans', sans-serif;
-    color: #2a2a2a;
-    padding-bottom: 100px;
+p {
+    font-size: 18px;
 }
 
-ul {
-    list-style-type: none;
+ul li a {
+    font-size: 1.5rem;
 }
 
-.arrow {
-    border: solid rgb(255, 255, 255);
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 3px;
-}
-
-.right {
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-}
-
-.add-icon {
-    text-decoration: none;
+.pseudo-nav a{
+    /* background-color: #B57EDC; */
     padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 14px;
-    color: #41E2BA;
-    transition: all .125s;
-    min-width: 100%;
-    display: inline-block;
-    text-align: center;
-    border: solid 1px #41E2BA;
-    transition: all .3s;
+    border-radius: 2px;
+    border: solid 1px #B57EDC;
+    text-decoration: none;
+    color: #B57EDC;
 }
-
-.add-icon:where(:hover, :active, :focus) {
-    background-color: #41E2BA;
-    color: #202023;
-}
-
-.add-place {
-    width: 25%;
-}
-
-.header-intro {
-    margin: 15px 0 35px 0;
-    color: #f7ede2;
-    border-radius: 10px;
-}
-
-.header-intro h1{
-    font-size: 1.75rem;
-    font-weight: 200;
-}
-
-.header-intro h1 span {
-    font-weight: 600;
-} */

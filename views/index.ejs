@@ -6,25 +6,28 @@
 <body>
     <%- include('partials/nav') %>
     <div class="page-container">
-        <h2>Places</h2>
-        <ul>
-            <% if (!userPlaces) { %>
-                <h2>You have no destinations yet!</h2>
-            <% } else { %>
-                <ul>
-                    <% for (let place of userPlaces) { %>
-                        <li>
-                            <a href="/places/index/<%= place.id %>"><%= place.country %></a>
-                            <span> - <%= place.city %></span>
-                        </li>
-                    <% } %>
-                </ul>
-            <% } %>
-        </ul>
+        <h2 class="destinations">Destinations</h2>
+        <% if (!userPlaces) { %>
+            <h2>You have no destinations yet!</h2>
+        <% } else { %>
+            <ul class="my-places-list">
+                <% for (let place of userPlaces) { %>
+                    <li>
+                        <a href="/places/index/<%= place.id %>" style="background-color: <%= place.color %>;">
+                            <%= place.city %>
+                            <span> - <%= place.country %></span>
+                        </a>
+                    </li>
+                <% } %>
+            </ul>
+        <% } %>
+
+        <div class="pseudo-nav">
+            <a href="/">Home</a>
+            <a href="/places/new">Add a place</a>
+        </div>
     </div>
 
-    <a href="/">Home</a>
-    <a href="/places/new">Add a place</a>
 </body>
 
 </html>

@@ -6,7 +6,7 @@ section {
 
 main {
     min-height: 100vh;
-    background-color: #242124;
+    /* background-color: #242124; */
 }
 
 main>section {
@@ -15,18 +15,15 @@ main>section {
     min-height: 100vh;
 }
 
-main>section h2 {
-    border-bottom: solid 2px var(--tertiary-color);
-    border-top: solid 2px var(--tertiary-color);
-    /* border-left: solid 1px var(--tertiary-color); */
-    /* height: 50px; */
-    color: var(--light-secondary);
-    font-size: 30px;
+main>section h3 {
+    /* border-bottom: solid 2px #B57EDC; */
+    /* border-top: solid 2px #B57EDC; */
+    font-size: 1.75rem;
+    color: #B57EDC;
     font-weight: 700;
     margin-block: 40px;
     margin-top: 75px;
     margin-inline: auto;
-    /* max-width: 300px; */
     padding-inline: 10px;
     text-align: center;
 }
@@ -35,11 +32,11 @@ main section#quick-guide aside {
     flex: 2;
     max-width: 88%;
     margin: 0 auto;
+    /* font-family: 'Yantramanav', sans-serif; */
 }
 
 main section#quick-guide ol {
     border-radius: 10px;
-    /* font-family: 'Yantramanav', sans-serif; */
     padding-left: 0;
     list-style-type: none;
     display: flex;
@@ -55,9 +52,9 @@ main section#quick-guide ol li {
     column-gap: 20px;
 }
 
-main section#quick-guide ol li h3 {
+main section#quick-guide ol li h4 {
     font-weight: 300;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 
 
@@ -74,15 +71,24 @@ main section#quick-guide ol li h3 {
     transform: translateY(0);
 }
 
-#featured h3 {
-    font-family: 'Yantramanav', sans-serif;
-    font-weight: 300;
+#featured p {
+    font-size: 1rem;
+    line-height: 1.5;
+    /* margin-bottom: 40px;
+    margin-top: 8rem; */
+    margin-left: 10px;
 }
 
-#featured p {
-    font-size: 18px;
-    line-height: 1.5;
-    margin-bottom: 40px;
+#featured h4 {
+    font-size: 4rem;
+    top: 8px;
+    left: -6px;
+    position: absolute;
+    color: #FF7733;
+    margin-top: 0;
+    z-index: -1;
+    line-height: .85;
+    /* color: #B57EDC; */
 }
 
 #featured ul {
@@ -95,14 +101,16 @@ main section#quick-guide ol li h3 {
 }
 
 #featured .card {
-    background-color: #322e32;
+    background-color: #FF9966;
     border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    padding-top: 75px;
+    box-shadow: 0 5px 8px -2px #b6a8be;
+    z-index: -2;
     margin-bottom: 20px;
     position: relative;
     color: white;
+    position: relative;
+    overflow: hidden;
+    padding-block: 10px;
 }
 
 #featured .card img {
@@ -113,6 +121,29 @@ main section#quick-guide ol li h3 {
     right: 20px;
     border-radius: 50%;
     object-fit: cover;
+}
+
+#featured .featured-explore {
+    display: flex;
+    margin-top: 125px;
+}
+
+#featured button {
+    cursor: pointer;
+    margin: 10px;
+    font-size: 1.25rem;
+    border: none;
+    border-radius: 5px;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#featured button a{
+    font-size: .75rem;
+    text-decoration: none;
+    color: #FF7733;
 }
 
 #landing {
@@ -160,9 +191,9 @@ main section#quick-guide ol li h3 {
 }
 
 #landing button {
-    background-color: #CCD5AE;
+    background-color: #B57EDC;
     border: none;
-    color: #242124;
+    color: #D6CADD;
     cursor: pointer;
     padding: 10px 20px;
     font-size: 16px;
@@ -170,7 +201,7 @@ main section#quick-guide ol li h3 {
     transition: all 0.3s ease;
     border-radius: 5px;
     text-decoration: none;
-    font-family: 'Yantramanav', sans-serif;
+    /* font-family: 'Yantramanav', sans-serif; */
 }
 
 #landing button:hover {
@@ -180,6 +211,7 @@ main section#quick-guide ol li h3 {
 
 .material-symbols-outlined {
     font-size: 50px;
+    color: #242124;
     font-variation-settings:
         'FILL' 0,
         'wght' 400,
