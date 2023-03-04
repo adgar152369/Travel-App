@@ -102,11 +102,8 @@ header .logo span {
     height: 3px;
     margin: 7px auto;
     background-color: lightgrey;
+    filter: contrast(1);
     transition: all 0.3s ease-in-out;
-}
-
-.hamburger .line.scrolled {
-    background-color: #F8F4FF;
 }
 
 @keyframes slidein {

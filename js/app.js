@@ -18,24 +18,3 @@ navLinks.forEach((li) => {
         mainBody.classList.toggle('unfocus');
     });
 });
-
-var observer = new IntersectionObserver(function(entries) {
-    if (entries[0].isIntersecting) {
-        toggleNavBars.forEach(bar => {
-            bar.classList.toggle("scrolled");
-        })
-        observer.unobserve(aboutSection);
-    }
-});
-
-observer.observe(aboutSection);
-
-// window.onscroll = function() {
-//     toggleNavBars.forEach(bar => {
-//         if (window.pageYOffset > 600) {
-//           bar.classList.add('scrolled')
-//         } else {
-//           bar.classList.remove('scrolled')
-//         }
-//     })
-//   }

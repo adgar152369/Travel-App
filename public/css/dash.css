@@ -16,8 +16,6 @@ main>section {
 }
 
 main>section h3 {
-    /* border-bottom: solid 2px #B57EDC; */
-    /* border-top: solid 2px #B57EDC; */
     font-size: 1.75rem;
     color: #B57EDC;
     font-weight: 700;
@@ -32,7 +30,6 @@ main section#quick-guide aside {
     flex: 2;
     max-width: 88%;
     margin: 0 auto;
-    /* font-family: 'Yantramanav', sans-serif; */
 }
 
 main section#quick-guide ol {
@@ -56,8 +53,6 @@ main section#quick-guide ol li h4 {
     font-weight: 300;
     font-size: 1.25rem;
 }
-
-
 
 #featured-list {
     opacity: 0;
@@ -102,8 +97,8 @@ main section#quick-guide ol li h4 {
 
 #featured .card {
     background-color: #FF9966;
-    border-radius: 10px;
-    box-shadow: 0 5px 8px -2px #b6a8be;
+    border-radius: 5px;
+    /* box-shadow: 0 5px 8px -2px #b6a8be; */
     z-index: -2;
     margin-bottom: 20px;
     position: relative;
